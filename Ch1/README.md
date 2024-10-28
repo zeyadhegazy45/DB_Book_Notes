@@ -110,8 +110,8 @@ Consistency constraints
 
 # Database Architecture
 1. **Centralized Architecture:**
-All data and processing are managed on a single server or computer system.
-Users access the database through a network, but the entire database resides in one place.
+- All data and processing are managed on a single server or computer system.
+- Users access the database through a network, but the entire database resides in one place.
 
 2. **Parallel Architecture:**
 - Uses multiple processors or servers working together to manage large databases efficiently.
