@@ -20,15 +20,15 @@ Databases are used in two primary modes:
 - Data duplication across files can lead to inconsistency.
 2. **Difficulty in Accessing Data:**
 - Retrieving data efficiently becomes complex without proper indexing or structure.
- 3-**Data Isolation:**
+3. **Data Isolation:**
 - Data scattered across multiple files and formats makes access and management difficult.
-4-**Integrity Problems:**
+4. **Integrity Problems:**
 - Data must meet certain consistency rules, but enforcing them is difficult in scattered systems.
-5-**Atomicity Issues:**
+5. **Atomicity Issues:**
 - Ensuring complete success or failure (all-or-nothing) in data operations is challenging.
-6-**Concurrent-Access Anomalies:**
+6. **Concurrent-Access Anomalies:**
 - Multiple users accessing or modifying data simultaneously can lead to conflicts.
-7-**Security Problems:**
+7. **Security Problems:**
 - Managing permissions and securing data is harder in unstructured systems.
 
 # Data Models
@@ -43,13 +43,13 @@ Consistency constraints
 - Represents data and their relationships using tables (relations).
 - Each table consists of multiple columns with unique names.
 - Example: SQL databases like MySQL, PostgreSQL.
-2- **Entity-Relationship (E-R) Model:**
+2. **Entity-Relationship (E-R) Model:**
 - Uses entities (objects) and relationships between them to represent data.
 - Often used in database design for conceptual modeling.
-3-**Semi-Structured Data Model:**
+3. **Semi-Structured Data Model:**
 - Allows data items of the same type to have varying attributes.
 - Common formats: JSON and XML.
-4-**Object-Based Data Model:**
+4. **Object-Based Data Model:**
 - Based on object-oriented programming concepts (e.g., Java, C++, C#).
 - Integrates data with the methods that manipulate them, often used in object-oriented databases.
 
