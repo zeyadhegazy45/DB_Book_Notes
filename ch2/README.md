@@ -3,9 +3,9 @@
 - while the term tuple is used to refer to a row. 
 - the term attribute refers to a column of a table.
 - The null value is aspecial value that signifies that the value is unknown or does not exist.
-- 
+
 # the difference between 
-1. **database schema : **
+1. **database schema:**
 -  is the logical design of the database
 2. **database instance:**
 - is a snapshot of the data in the database at a given instant in time.
@@ -28,11 +28,11 @@
 - Foreign-key constraints are a specific type of referential integrity constraint where the referenced attribute is the primary key.
 ## Note:
 - Most modern database systems support foreign-key constraints, but they do not enforce referential integrity where the referenced attribute is not a primary key.
-- 
+  
 # Relational Algebra
 - Relational algebra is a set of operations used to manipulate and query data from relational databases. These operations take one or two relations (tables) as input and produce a new relation as output.
 
-1. **Unary Operations
+1. **Unary Operations**
 - These operations act on a single relation.
 
 1. Select (σ):
