@@ -4,7 +4,7 @@
 - the term attribute refers to a column of a table.
 - The null value is aspecial value that signifies that the value is unknown or does not exist.
 
-# the difference between 
+# the difference between database schema and database instance
 1. **database schema:**
 -  is the logical design of the database
 2. **database instance:**
