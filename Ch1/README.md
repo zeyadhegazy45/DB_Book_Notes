@@ -6,11 +6,11 @@ A database (DB) is a structured collection of data.
 # Modes of Database Usage
 
 Databases are used in two primary modes:
-- 1-Online Transaction Processing (OLTP):
+1. **Online Transaction Processing (OLTP):**
 - Supports a large number of users accessing small amounts of data.
 - Users perform frequent, small updates and queries (e.g., e-commerce transactions, banking applications).
 - This is the most common mode for most database applications.
-- 2-Data Analytics (OLAP):
+  2. **Data Analytics (OLAP):**
 - Focuses on analyzing data to derive insights, patterns, and business rules.
 - Used for making strategic decisions based on trends or predictions (e.g., business intelligence, market analysis).
 
