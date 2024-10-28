@@ -108,7 +108,7 @@ Consistency constraints
 3. **Indices:**
 - Provide fast access to specific data items by acting as pointers to relevant records.
 
-#Database Architecture
+# Database Architecture
 1. **Centralized Architecture:**
 All data and processing are managed on a single server or computer system.
 Users access the database through a network, but the entire database resides in one place.
