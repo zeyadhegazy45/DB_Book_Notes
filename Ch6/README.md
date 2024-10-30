@@ -8,7 +8,7 @@
 3. **Attributes**
 - Attributes are descriptive properties or characteristics of an entity.
 - Each entity is represented by a set of attributes. For example, a Student entity might have attributes like Name, ID, Age, and Major.
-4. **Relationship Sets
+4. **Relationship Sets**
 - Relationships describe associations between two or more entities.
 - A relationship set consists of relationships of the same type between different entity sets (e.g., a “Takes” relationship between Students and Courses).
 # Complex Attributes in the E-R model
