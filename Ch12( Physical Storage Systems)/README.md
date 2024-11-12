@@ -38,4 +38,5 @@
 - Primary Storage: Fast and costly (cache and main memory).
 - Secondary Storage: Online storage (flash memory and magnetic disks).
 - Tertiary Storage: Offline storage (tape and optical storage).
-  
+![image_alt](https://github.com/zeyadhegazy45/DB_Book_Notes/blob/d00527cbf9760c088bbd29e3e1d6d76470516fc2/Ch12(%20Physical%20Storage%20Systems)/storage.png)
+
