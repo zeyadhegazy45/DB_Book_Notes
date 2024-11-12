@@ -42,4 +42,16 @@
 - ![image_alt](https://github.com/zeyadhegazy45/DB_Book_Notes/blob/d00527cbf9760c088bbd29e3e1d6d76470516fc2/Ch12(%20Physical%20Storage%20Systems)/storage.png)
 
   
+# some notes 
+- Random Access: Direct access to any data location; fast for scattered data.(volatile)
+- Sequential Access: Data accessed in order; slower for distant data, but efficient for reading large blocks in sequence (not volatile)
+  
+- The main measures of the qualities of a disk are capacity, access time, data-transfer rate, and reliability
 
+- **Access Time:**
+
+- Definition: The total time needed for a storage device to locate and transfer data to/from memory.
+- **Components:**
+- Seek Time: The time for the read/write head to move to the correct track.
+- Rotational Latency: The time waiting for the desired sector of the disk to rotate under the read/write head. On average, rotational latency is half the time it takes for a full disk rotation.
+- Transfer Time: The time required to actually transfer the data once the read/write head is in the correct position
