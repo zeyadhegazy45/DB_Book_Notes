@@ -55,3 +55,50 @@
 - Seek Time: The time for the read/write head to move to the correct track.
 - Rotational Latency: The time waiting for the desired sector of the disk to rotate under the read/write head. On average, rotational latency is half the time it takes for a full disk rotation.
 - Transfer Time: The time required to actually transfer the data once the read/write head is in the correct position
+
+# RAID(edundant arrays of independent disks)
+- هو نظام بنستخدمه عشان نقدر نخزن الداتا بتاعتنا علي اكتر من هارد ديسك طب ايه الفكره ؟! الفكره اني لو هارد عطل يبقي عندنا استبن للداتا بتاعتنا علي ما الاول يرجع
+## Improvement in Performance via Parallelism
+1. **Mirroring (Duplicating Data on Multiple Disks):**
+
+- With mirroring, data is stored on two disks, so you can read from either one.
+- This doubles the read speed since both disks can handle read requests simultaneously.
+
+2. **Striping Data Across Multiple Disks:**
+
+1. Bit-level Striping:
+- Splits each bit of a byte across different disks.
+- For example, if you have 8 disks, each disk stores a different bit of the byte.
+- This increases data transfer for large reads but doesn’t help much with small operations.
+
+2. Block-level Striping:
+- Splits larger blocks of data across multiple disks.
+- For large files, data is read in parallel from all disks, increasing speed.
+-  For small reads, only one disk is used, but the other disks are free for other tasks.
+# the common RAID levels
+
+1. **RAID 0 (Striping):**
+- No redundancy, just data striping. Data is split across multiple disks, which increases performance but if one disk fails, all data is lost.
+
+2. **RAID 1 (Mirroring):**
+- Data is duplicated on two disks, so if one disk fails, the other has the exact copy. This increases reliability but is expensive since you need double the number of disks.
+
+3. **RAID 5 (Distributed Parity):**
+- Data and parity (error-correcting information) are spread across all disks. Parity is used to rebuild data in case of a disk failure, making it more efficient and reliable than RAID 0 and RAID 1.
+- The parity information is distributed across all disks to avoid data loss if one disk fails. This is a common setup for cost-effective redundancy.
+
+4. **RAID 6 (Double Parity):**
+- Similar to RAID 5 but with two sets of parity blocks, allowing the system to tolerate two disk failures without data loss. It provides even higher reliability but has more overhead.
+
+# Techniques to Improve Disk Access:
+
+1. **Buffering:**
+- Data read from the disk is temporarily stored in memory to be used later.
+2. **Read-ahead:**
+- Consecutive blocks are read into memory even if not immediately needed, helping speed up sequential access.
+3. **Scheduling:**
+- Access requests are arranged to minimize disk-arm movement. The elevator algorithm is often used to reorder requests for efficiency, similar to how elevators work.
+4. **File Organization:**
+- Storing blocks in a way that matches the expected access pattern can reduce access time. For example, storing blocks sequentially on the disk can help with sequential file access.
+5. **Non-volatile Write Buffers:**
+- To prevent data loss during a power failure, data is first written to non-volatile memory (like NVRAM or flash memory) before being transferred to disk. This speeds up writes and ensures data integrity in case of a crash.
