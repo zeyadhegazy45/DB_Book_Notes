@@ -44,8 +44,7 @@ Example Structure: For a database of instructor records, a fixed-length structur
 - New records are placed in the first slot indicated by the free list.
 - If no space is available, the record is appended to the end of the file.
 
-  
-  4. **Benefit of Fixed-Length Records:**
+4. **Benefit of Fixed-Length Records:**
 - Inserting and deleting fixed-length records is efficient because the free space from a deleted record exactly matches the space needed for new records, unlike variable-length records where sizes may not align
 
 
