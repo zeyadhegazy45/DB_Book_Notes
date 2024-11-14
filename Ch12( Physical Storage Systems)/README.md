@@ -58,7 +58,7 @@
 
 ![image_alt](https://github.com/zeyadhegazy45/DB_Book_Notes/blob/63c7883b70bfea2bee4e583a729712d41fa345ef/Ch12(%20Physical%20Storage%20Systems)/fake_disk.png)
 
-# RAID(edundant arrays of independent disks)
+# RAID(Redundant arrays of independent disks)
 - هو نظام بنستخدمه عشان نقدر نخزن الداتا بتاعتنا علي اكتر من هارد ديسك طب ايه الفكره ؟! الفكره اني لو هارد عطل يبقي عندنا استبن للداتا بتاعتنا علي ما الاول يرجع
 ## Improvement in Performance via Parallelism
 1. **Mirroring (Duplicating Data on Multiple Disks):**
