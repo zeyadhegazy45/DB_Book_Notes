@@ -1,5 +1,5 @@
 
-# File Organization Summary
+# File Organization 
 
 1. **Database Files and Storage:**
 - Databases are stored as files managed by the operating system and permanently reside on disk.
@@ -27,25 +27,25 @@
 
 Example Structure: For a database of instructor records, a fixed-length structure assigns maximum byte allocation to each attribute, resulting in uniform record sizes (e.g., 53 bytes per record).
 
--   **Challenges with Simple Storage:**
+1. **Challenges with Simple Storage:**. 
 
 - Block Boundaries: If the block size isn’t a multiple of the record size, records may cross block boundaries, requiring multiple block accesses.
 - Deletion Complexity: Deleting records can leave unused spaces that require efficient handling.
 - Block Allocation Solution: Only allocate full records to each block to avoid spanning blocks. Remaining space in blocks is left unused if a record cannot fully fit.
 
--   **Deletion Handling: Deletion of a record can:**
+2. **Deletion Handling: Deletion of a record can:**
 
 - Shift Records: Move records up to fill the deleted space, which can be inefficient.
 - End-Fill Strategy: Move the last record into the deleted record's space to minimize shifting.
 - Free List: Use a "free list" by marking deleted records and linking them together for reuse. A file header points to the first available (deleted) record, creating a linked list of empty slots.
 
--  **Insertion and Reuse:**
+3. **Insertion and Reuse:**
 
 - New records are placed in the first slot indicated by the free list.
 - If no space is available, the record is appended to the end of the file.
 
   
--  **Benefit of Fixed-Length Records:**
+  4. **Benefit of Fixed-Length Records:**
 - Inserting and deleting fixed-length records is efficient because the free space from a deleted record exactly matches the space needed for new records, unlike variable-length records where sizes may not align
 
 
@@ -54,12 +54,12 @@ Example Structure: For a database of instructor records, a fixed-length structur
 
 - Records can have attributes with variable lengths (e.g., strings, arrays) or multiple types of records within one file.
 
--   **Implementation Challenges:**
+1. **Implementation Challenges:**
 
 - Need to extract variable-length attributes easily.
 - Must store variable-length records within a block in a way that simplifies access.
 
-- **Record Structure:**
+2. **Record Structure:**
 
 - Fixed-Length Part: Contains a consistent structure across all records.
 - Variable-Length Attributes: Stored as pairs (offset, length), where:
@@ -67,37 +67,37 @@ Example Structure: For a database of instructor records, a fixed-length structur
 - Length: Size of the attribute in bytes.
 - Null Bitmap: Tracks null values in attributes to save space, useful if many fields are null.
 
-- **Storing in Blocks (Slotted-Page Structure):**
+3. **Storing in Blocks (Slotted-Page Structure):**
 
 - Block Header: Contains metadata, like the number of records and the pointer to the end of free space.
 - Record Array: Each entry specifies the location and size of records, allowing for efficient data access.
 
-- **Free Space Management:**
+4. **Free Space Management:**
 - Records are added at the end of free space.
 - When a record is deleted, it’s marked and space is freed up, then adjusted to prevent fragmentation.
 
-- **Advantages of Indirection:**
+5. **Advantages of Indirection:**
 - Indirect pointers (from the header to records) allow records to move within the block without breaking references, maintaining efficient use of space.
 
 
 # storing large objects in databases:
 
-- **Large Object Storage:**
+1. **Large Object Storage:**
 - Databases often store large data (e.g., images, audio, videos) that exceed typical block sizes.
 - SQL supports data types for large objects (BLOB for binary data, CLOB for text).
 
-- **Storage Techniques:**
+2. **Storage Techniques:**
 - Large objects are stored separately from the main record, with a pointer linking to them.
 - Objects can be stored:
 1. Externally in File Systems: Outside the database with file paths stored as attributes.
 2. Internally as Database File Structures: Managed within the database, often using B+-tree structures for fast access to specific parts.
 
-- **Considerations:**
+3. **Considerations:**
 
 - Performance: Accessing large objects in-database can impact performance.
 - Backup Size: Including large objects in database backups increases backup file size.
 
-- **File System Integration:**
+4. **File System Integration:**
 
 - Some databases integrate file systems to maintain constraints, prevent file deletions linked by the database, and ensure secure access.
 - Example: Oracle’s SecureFiles provides controlled access from both the database and file system.
