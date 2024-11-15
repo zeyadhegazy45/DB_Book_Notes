@@ -101,3 +101,21 @@ Example Structure: For a database of instructor records, a fixed-length structur
 - Some databases integrate file systems to maintain constraints, prevent file deletions linked by the database, and ensure secure access.
 - Example: Oracle’s SecureFiles provides controlled access from both the database and file system.
 
+
+# Different file organization methods
+
+1. **Heap File Organization:**
+- Records are placed wherever there is space in the file, with no particular ordering. Each relation has one or more files.
+
+2.** Sequential File Organization:**
+- Records are stored in sequential order based on a specific “search key.” This arrangement allows ordered access to records.
+  
+3. **Multitable Clustering File Organization:**
+- Records from multiple relations are stored within the same file and often in the same block. This reduces the cost of certain join operations by keeping related records together.
+
+4. **B+-tree File Organization:**
+- This method uses the B+-tree structure to maintain ordered access even with frequent inserts, deletions, and updates. It provides efficient access to specific records based on a search key.
+
+5. **Hashing File Organization:**
+- A hash function applied to a record’s attribute determines its file location, optimizing the retrieval of specific records based on hash values.
+
