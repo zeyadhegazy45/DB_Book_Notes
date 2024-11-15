@@ -107,7 +107,7 @@ Example Structure: For a database of instructor records, a fixed-length structur
 1. **Heap File Organization:**
 - Records are placed wherever there is space in the file, with no particular ordering. Each relation has one or more files.
 
-2. ** Sequential File Organization:**
+2. **Sequential File Organization:**
 - Records are stored in sequential order based on a specific “search key.” This arrangement allows ordered access to records.
   
 3. **Multitable Clustering File Organization:**
@@ -124,11 +124,11 @@ Example Structure: For a database of instructor records, a fixed-length structur
 - ال records بتخزن في اي مكان متاح من غير ترتيب وغالبا لو هنضيف ريكورد جديد بينضاف ف اخر ال file but spaces freed by deletions are reused for efficiency
 - **how can we track the freed spaces??**
 - by using a free-space map:
--  tracks which file blocks have enough space for new records.
--  It is typically represented as an array, with each entry indicating the fraction of free space in a block
+- tracks which file blocks have enough space for new records.
+- It is typically represented as an array, with each entry indicating the fraction of free space in a block
 
 - Multi-level free-space maps improve efficiency for large files. A second-level map summarizes the maximum free space among groups of entries in the main map, reducing the scan time.
--Free-space maps are updated periodically rather than immediately after each change, reducing overhead.
+- Free-space maps are updated periodically rather than immediately after each change, reducing overhead.
 
 # Sequential File Organization
 
